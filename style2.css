@@ -1,0 +1,167 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'sans-serif';
+}
+body{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: url("gro1.jpg") no-repeat center fixed;*/
+  background-size: cover; 
+  /* background-image: url(gro1.jpg); */
+  
+
+}
+.container{
+  position: relative;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  
+}
+.container span{
+  position: absolute;
+  left:0;
+  width:10px;
+  height: 10px;
+  background: #0ef;
+  border-radius: 0px;
+  transform-origin: 128px;
+  transform: scale(2.2)rotate(calc(var(--i)*(360deg/50)));
+  animation:animateBlink 4s linear infinite;
+  animation-delay:calc(var(--i)*(4s/50));
+
+}
+@keyframes animateBlink{
+  0%{
+    background:rgb(147, 147, 234);
+  }
+  25%{
+    background: #0ef;
+  }
+  50%{
+    background:rgb(228, 248, 169)
+  }
+  75%{
+    background:rgb(242, 126, 126)
+  }
+
+}
+img{
+  width:400px;
+  border-radius:100px;
+  border:2px solid rgb(144, 240, 144);
+  backdrop-filter: blur(20px);
+  transition:.3s;
+}
+img:hover{
+  box-shadow: 0 0 60px rgb(144, 240, 144);
+}
+ video{
+  position:fixed;
+  left:0;
+  right:0;
+  min-width: 100%;
+  min-height:100%;  
+} 
+
+
+
+.form-box{
+  position: absolute;
+  width: 400px;
+  background: rgb(147, 147, 234);
+  border-radius: 100px;
+  bottom:0;
+  
+
+}
+
+.form-box form{
+  width: 100%;
+  padding:10px 50px;
+}
+h2{
+  font-size: 2rem;
+  color:#0ef;
+  text-align: center;
+  /* animation-name: medicine;
+  animation-duration: 4s; */
+
+}
+/* @keyframes medicine{
+  from{background-color: #0ef;}
+  to{background-color:rgb(147, 147, 234);} */
+
+.inputbox{
+  position: relative;
+  margin: 5px 0;
+}
+.inputbox input{
+  width:100%;
+  height:30px;
+  background: transparent;
+  border:2px solid #0ef;
+  outline:none;
+  border-radius: 40px;
+  font-size: 1em;
+  color:rgb(88, 239, 158);
+  padding: 0 20px;
+  transition:0.5s ease;
+}
+.inputbox input:focus~label,
+.inputbox input:valid~label{
+  border-color: rgb(113, 221, 245);
+
+
+
+
+}
+.inputbox label{
+  position:absolute;
+  top:50%;
+  left:20px;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color:white;
+  pointer-events: none;
+  transition: .5s ease;
+}
+.inputbox input:focus~label,
+.inputbox input:valid~label{
+  top:1px;
+  font-size: 1em;
+  background: rgb(147, 147, 234,0.5);
+  /* background: white; */
+  padding:0 6px;
+  color: rgb(232, 253, 115);
+
+
+}
+#btn{
+  width:100px;
+  margin:0 100px;
+  padding:10px;
+  background:rgb(240, 130, 224);
+  border-radius: 40px;
+  border:none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color:rgb(246, 245, 249);
+  font-weight: 500;
+  transition: .3s;
+  border:1px solid rgb(101, 241, 220);
+  backdrop-filter: blur(20px);
+  background-image: conic-gradient(red,yellow,green,pink,gray,black);
+
+  
+  
+}
+#btn:hover{
+  box-shadow: 0 0 60px rgb(245, 161, 221);
+}
